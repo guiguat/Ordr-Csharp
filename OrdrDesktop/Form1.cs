@@ -12,8 +12,10 @@ namespace OrdrDesktop
 {
     public partial class FormDashboard : Form
     {
+        //fields
         private Button currentBtn;
         private Panel leftBorderBtn;
+        private Form currentChildForm;
         public FormDashboard()
         {
             InitializeComponent();
@@ -58,30 +60,50 @@ namespace OrdrDesktop
             }
         }
 
-        
+        private void OpenChildForm(Form childForm)
+        {
+            if (currentChildForm != null)
+            {
+                currentChildForm.Close();
+            }
+            currentChildForm = childForm;
+            childForm.TopLevel = false;
+            childForm.FormBorderStyle = FormBorderStyle.None;
+            childForm.Dock = DockStyle.Fill;
+            
+            panelForms.Controls.Add(childForm);
+            panelForms.Tag = childForm;
+            childForm.BringToFront();
+            childForm.Show();
+        }
 
         private void button2_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColors.color2);
+            OpenChildForm(new FormProduto());
         }
 
         private void btnRelatorio_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColors.color1);
+            OpenChildForm(new FormRelatorio());
         }
 
         private void btnCozinha_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColors.color3);
+            OpenChildForm(new FormCozinha());
         }
 
         private void btnConfig_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColors.color4);
+            OpenChildForm(new FormConfig());
         }
 
         private void btnHome_Click(object sender, EventArgs e)
         {
+            currentChildForm.Close();
             Reset();
         }
 
