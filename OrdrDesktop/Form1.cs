@@ -120,6 +120,7 @@ namespace OrdrDesktop
 
         private void timer1_Tick(object sender, EventArgs e)
         {
+            string auxHora, auxMinuto, auxSegundo;
             segundo++;
             if (minuto < 60 && segundo == 60)
             {
@@ -132,7 +133,10 @@ namespace OrdrDesktop
                 minuto = 0;
                 hora++;
             }
-            lblTimer.Text = $"{hora}:{minuto}:{segundo}";
+            auxHora = hora < 10 ? "0" : string.Empty;
+            auxMinuto = minuto < 10 ? "0" : string.Empty;
+            auxSegundo = segundo < 10 ? "0" : string.Empty;
+            lblTimer.Text = $"{auxHora}{hora}:{auxMinuto}{minuto}:{auxSegundo}{segundo}";
         }
     }
 }

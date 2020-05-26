@@ -37,22 +37,21 @@
             this.btnProd = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
             this.panelForms = new System.Windows.Forms.Panel();
-            this.btnHome = new System.Windows.Forms.PictureBox();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
             this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTimer = new System.Windows.Forms.Label();
+            this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelForms.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
-            this.panelMenu.Controls.Add(this.lblTimer);
             this.panelMenu.Controls.Add(this.btnConfig);
             this.panelMenu.Controls.Add(this.btnCozinha);
             this.panelMenu.Controls.Add(this.btnProd);
@@ -151,12 +150,44 @@
             // panelForms
             // 
             this.panelForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.panelForms.Controls.Add(this.lblTimer);
             this.panelForms.Controls.Add(this.pictureBox1);
             this.panelForms.Dock = System.Windows.Forms.DockStyle.Fill;
             this.panelForms.Location = new System.Drawing.Point(186, 0);
             this.panelForms.Name = "panelForms";
             this.panelForms.Size = new System.Drawing.Size(577, 432);
             this.panelForms.TabIndex = 0;
+            // 
+            // timer1
+            // 
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(134)))), ((int)(((byte)(168)))));
+            this.lblTimer.Location = new System.Drawing.Point(240, 305);
+            this.lblTimer.Margin = new System.Windows.Forms.Padding(10, 0, 3, 10);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(97, 34);
+            this.lblTimer.TabIndex = 1;
+            this.lblTimer.Text = "00:00:00";
+            // 
+            // pictureBox1
+            // 
+            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.pictureBox1.Image = global::OrdrDesktop.Properties.Resources.presentation;
+            this.pictureBox1.Location = new System.Drawing.Point(208, 144);
+            this.pictureBox1.Name = "pictureBox1";
+            this.pictureBox1.Size = new System.Drawing.Size(161, 144);
+            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.pictureBox1.TabIndex = 6;
+            this.pictureBox1.TabStop = false;
             // 
             // btnHome
             // 
@@ -173,36 +204,6 @@
             this.btnHome.TabStop = false;
             this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
             // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.pictureBox1.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.pictureBox1.Image = global::OrdrDesktop.Properties.Resources.presentation;
-            this.pictureBox1.Location = new System.Drawing.Point(208, 144);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(161, 144);
-            this.pictureBox1.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.pictureBox1.TabIndex = 6;
-            this.pictureBox1.TabStop = false;
-            // 
-            // timer1
-            // 
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
-            // 
-            // lblTimer
-            // 
-            this.lblTimer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
-            this.lblTimer.AutoSize = true;
-            this.lblTimer.Font = new System.Drawing.Font("Poppins Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
-            this.lblTimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(134)))), ((int)(((byte)(168)))));
-            this.lblTimer.Location = new System.Drawing.Point(52, 409);
-            this.lblTimer.Margin = new System.Windows.Forms.Padding(10, 0, 3, 10);
-            this.lblTimer.Name = "lblTimer";
-            this.lblTimer.Size = new System.Drawing.Size(72, 23);
-            this.lblTimer.TabIndex = 1;
-            this.lblTimer.Text = "00:00:00";
-            // 
             // FormDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -216,11 +217,11 @@
             this.Name = "FormDashboard";
             this.Text = "ORDR - Gerenciamento de Pedidos";
             this.panelMenu.ResumeLayout(false);
-            this.panelMenu.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panelForms.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
+            this.panelForms.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.ResumeLayout(false);
 
         }
