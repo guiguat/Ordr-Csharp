@@ -58,6 +58,8 @@ namespace OrdrDesktop
             }
         }
 
+        
+
         private void button2_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColors.color2);
@@ -76,6 +78,17 @@ namespace OrdrDesktop
         private void btnConfig_Click(object sender, EventArgs e)
         {
             ActiveButton(sender, RGBColors.color4);
+        }
+
+        private void btnHome_Click(object sender, EventArgs e)
+        {
+            Reset();
+        }
+
+        private void Reset()
+        {
+            DisableButton();
+            leftBorderBtn.Visible = false;
         }
     }
 }
