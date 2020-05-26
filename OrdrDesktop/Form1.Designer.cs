@@ -170,7 +170,7 @@
             this.lblTimer.AutoSize = true;
             this.lblTimer.Font = new System.Drawing.Font("Poppins", 14.25F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblTimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(134)))), ((int)(((byte)(168)))));
-            this.lblTimer.Location = new System.Drawing.Point(240, 305);
+            this.lblTimer.Location = new System.Drawing.Point(241, 291);
             this.lblTimer.Margin = new System.Windows.Forms.Padding(10, 0, 3, 10);
             this.lblTimer.Name = "lblTimer";
             this.lblTimer.Size = new System.Drawing.Size(97, 34);
