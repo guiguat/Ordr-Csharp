@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDashboard));
             this.panelMenu = new System.Windows.Forms.Panel();
             this.panel2 = new System.Windows.Forms.Panel();
@@ -38,6 +39,8 @@
             this.panelForms = new System.Windows.Forms.Panel();
             this.btnHome = new System.Windows.Forms.PictureBox();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
+            this.lblTimer = new System.Windows.Forms.Label();
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
             this.panelForms.SuspendLayout();
@@ -49,6 +52,7 @@
             // 
             this.panelMenu.AutoScroll = true;
             this.panelMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
+            this.panelMenu.Controls.Add(this.lblTimer);
             this.panelMenu.Controls.Add(this.btnConfig);
             this.panelMenu.Controls.Add(this.btnCozinha);
             this.panelMenu.Controls.Add(this.btnProd);
@@ -181,6 +185,24 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
+            // timer1
+            // 
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
+            // 
+            // lblTimer
+            // 
+            this.lblTimer.Anchor = System.Windows.Forms.AnchorStyles.Bottom;
+            this.lblTimer.AutoSize = true;
+            this.lblTimer.Font = new System.Drawing.Font("Poppins Medium", 9.75F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
+            this.lblTimer.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(97)))), ((int)(((byte)(134)))), ((int)(((byte)(168)))));
+            this.lblTimer.Location = new System.Drawing.Point(52, 409);
+            this.lblTimer.Margin = new System.Windows.Forms.Padding(10, 0, 3, 10);
+            this.lblTimer.Name = "lblTimer";
+            this.lblTimer.Size = new System.Drawing.Size(72, 23);
+            this.lblTimer.TabIndex = 1;
+            this.lblTimer.Text = "00:00:00";
+            // 
             // FormDashboard
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -194,6 +216,7 @@
             this.Name = "FormDashboard";
             this.Text = "ORDR - Gerenciamento de Pedidos";
             this.panelMenu.ResumeLayout(false);
+            this.panelMenu.PerformLayout();
             this.panel2.ResumeLayout(false);
             this.panelForms.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
@@ -213,6 +236,8 @@
         private System.Windows.Forms.PictureBox btnHome;
         private System.Windows.Forms.Panel panelForms;
         private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.Timer timer1;
+        private System.Windows.Forms.Label lblTimer;
     }
 }
 

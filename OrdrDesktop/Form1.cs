@@ -12,13 +12,18 @@ namespace OrdrDesktop
 {
     public partial class FormDashboard : Form
     {
-        //fields
+
         private Button currentBtn;
         private Panel leftBorderBtn;
         private Form currentChildForm;
+
+        private int hora = DateTime.Now.Hour;
+        private int minuto = DateTime.Now.Minute;
+        private int segundo = DateTime.Now.Second;
         public FormDashboard()
         {
             InitializeComponent();
+            timer1.Enabled = true;
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
@@ -111,6 +116,23 @@ namespace OrdrDesktop
         {
             DisableButton();
             leftBorderBtn.Visible = false;
+        }
+
+        private void timer1_Tick(object sender, EventArgs e)
+        {
+            segundo++;
+            if (minuto < 60 && segundo == 60)
+            {
+                segundo = 0;
+                minuto++;
+            }
+            if (minuto == 60 && segundo == 60)
+            {
+                segundo = 0;
+                minuto = 0;
+                hora++;
+            }
+            lblTimer.Text = $"{hora}:{minuto}:{segundo}";
         }
     }
 }
