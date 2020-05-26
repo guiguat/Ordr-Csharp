@@ -73,10 +73,10 @@
             this.btnConfig.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnConfig.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnConfig.ForeColor = System.Drawing.Color.White;
-            this.btnConfig.Location = new System.Drawing.Point(0, 179);
+            this.btnConfig.Location = new System.Drawing.Point(0, 239);
             this.btnConfig.Name = "btnConfig";
             this.btnConfig.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnConfig.Size = new System.Drawing.Size(186, 40);
+            this.btnConfig.Size = new System.Drawing.Size(186, 60);
             this.btnConfig.TabIndex = 3;
             this.btnConfig.Text = "Configuração";
             this.btnConfig.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -92,10 +92,10 @@
             this.btnCozinha.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnCozinha.ForeColor = System.Drawing.Color.White;
             this.btnCozinha.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnCozinha.Location = new System.Drawing.Point(0, 139);
+            this.btnCozinha.Location = new System.Drawing.Point(0, 179);
             this.btnCozinha.Name = "btnCozinha";
             this.btnCozinha.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnCozinha.Size = new System.Drawing.Size(186, 40);
+            this.btnCozinha.Size = new System.Drawing.Size(186, 60);
             this.btnCozinha.TabIndex = 2;
             this.btnCozinha.Text = "Cozinha";
             this.btnCozinha.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -111,10 +111,10 @@
             this.btnProd.Font = new System.Drawing.Font("Poppins", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.btnProd.ForeColor = System.Drawing.Color.White;
             this.btnProd.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.btnProd.Location = new System.Drawing.Point(0, 99);
+            this.btnProd.Location = new System.Drawing.Point(0, 119);
             this.btnProd.Name = "btnProd";
             this.btnProd.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnProd.Size = new System.Drawing.Size(186, 40);
+            this.btnProd.Size = new System.Drawing.Size(186, 60);
             this.btnProd.TabIndex = 1;
             this.btnProd.Text = "Produtos";
             this.btnProd.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
@@ -133,7 +133,7 @@
             this.btnRelatorio.Location = new System.Drawing.Point(0, 59);
             this.btnRelatorio.Name = "btnRelatorio";
             this.btnRelatorio.Padding = new System.Windows.Forms.Padding(10, 0, 0, 0);
-            this.btnRelatorio.Size = new System.Drawing.Size(186, 40);
+            this.btnRelatorio.Size = new System.Drawing.Size(186, 60);
             this.btnRelatorio.TabIndex = 0;
             this.btnRelatorio.Text = "Relatório";
             this.btnRelatorio.TextAlign = System.Drawing.ContentAlignment.MiddleLeft;
