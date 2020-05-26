@@ -117,21 +117,6 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="assets\baseline_widgets_white_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\baseline_restaurant_white_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\baseline_settings_white_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\baseline_view_list_white_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <None Include="assets\baseline_dashboard_white_18dp.png" />
-  </ItemGroup>
-  <ItemGroup>
     <None Include="assets\icon.png" />
   </ItemGroup>
   <ItemGroup>
