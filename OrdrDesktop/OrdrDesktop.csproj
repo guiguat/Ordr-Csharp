@@ -83,7 +83,7 @@
     <Compile Include="FormRelatorio.Designer.cs">
       <DependentUpon>FormRelatorio.cs</DependentUpon>
     </Compile>
-    <Compile Include="models\RelatorioModel.cs" />
+    <Compile Include="RelatorioModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="RelatorioProcessor.cs" />
@@ -108,6 +108,9 @@
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <None Include="packages.config" />
+    <None Include="Properties\DataSources\FormConfig.datasource" />
+    <None Include="Properties\DataSources\OrdrDesktop.models.RelatorioItemModel.datasource" />
+    <None Include="Properties\DataSources\OrdrDesktop.models.RelatorioModel.datasource" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>

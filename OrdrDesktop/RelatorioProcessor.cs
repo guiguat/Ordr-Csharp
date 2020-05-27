@@ -1,4 +1,5 @@
-﻿using System;
+﻿using OrdrDesktop.models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Net.Http;
@@ -9,12 +10,17 @@ namespace OrdrDesktop
 {
     public class RelatorioProcessor
     {
-        public async Task loadRelatorio()
+        public static async Task<RelatorioModel> loadRelatorio()
         {
             using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync("http://localhost:3333/relatorio")) {
                 if (response.IsSuccessStatusCode)
                 {
-
+                    RelatorioModel relatorio = await response.Content.ReadAsAsync<RelatorioModel>();
+                    return relatorio;
+                }
+                else
+                {
+                    throw new Exception(response.ReasonPhrase);
                 }
             }
         }
