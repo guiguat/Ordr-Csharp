@@ -11,10 +11,11 @@ namespace OrdrDesktop
     class ApiHelper
     {
         public static HttpClient ApiClient { get; set; }
+        public static string baseUrl { get; set; }
         public static void InitializeClient()
         {
             ApiClient = new HttpClient();
-            ApiClient.BaseAddress = new Uri("http://localhost:3333/");  
+            ApiClient.BaseAddress = new Uri(baseUrl);  
             ApiClient.DefaultRequestHeaders.Accept.Clear();
             ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }

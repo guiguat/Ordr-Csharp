@@ -24,6 +24,7 @@ namespace OrdrDesktop
         {
             InitializeComponent();
             timer1.Enabled = true;
+            ApiHelper.InitializeClient();
             leftBorderBtn = new Panel();
             leftBorderBtn.Size = new Size(7, 60);
             panelMenu.Controls.Add(leftBorderBtn);
