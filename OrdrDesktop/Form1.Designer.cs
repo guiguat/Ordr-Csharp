@@ -31,21 +31,21 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(FormDashboard));
             this.panelMenu = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
             this.btnConfig = new System.Windows.Forms.Button();
             this.btnCozinha = new System.Windows.Forms.Button();
             this.btnProd = new System.Windows.Forms.Button();
             this.btnRelatorio = new System.Windows.Forms.Button();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.btnHome = new System.Windows.Forms.PictureBox();
             this.panelForms = new System.Windows.Forms.Panel();
-            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.lblTimer = new System.Windows.Forms.Label();
             this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.btnHome = new System.Windows.Forms.PictureBox();
+            this.timer1 = new System.Windows.Forms.Timer(this.components);
             this.panelMenu.SuspendLayout();
             this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.panelForms.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).BeginInit();
             this.SuspendLayout();
             // 
             // panelMenu
@@ -62,15 +62,6 @@
             this.panelMenu.Name = "panelMenu";
             this.panelMenu.Size = new System.Drawing.Size(186, 432);
             this.panelMenu.TabIndex = 0;
-            // 
-            // panel2
-            // 
-            this.panel2.Controls.Add(this.btnHome);
-            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel2.Location = new System.Drawing.Point(0, 0);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(186, 59);
-            this.panel2.TabIndex = 0;
             // 
             // btnConfig
             // 
@@ -147,6 +138,30 @@
             this.btnRelatorio.UseVisualStyleBackColor = true;
             this.btnRelatorio.Click += new System.EventHandler(this.btnRelatorio_Click);
             // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.btnHome);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel2.Location = new System.Drawing.Point(0, 0);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(186, 59);
+            this.panel2.TabIndex = 0;
+            // 
+            // btnHome
+            // 
+            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnHome.Image = global::OrdrDesktop.Properties.Resources.logo;
+            this.btnHome.Location = new System.Drawing.Point(46, 12);
+            this.btnHome.Name = "btnHome";
+            this.btnHome.Size = new System.Drawing.Size(99, 41);
+            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
+            this.btnHome.TabIndex = 0;
+            this.btnHome.TabStop = false;
+            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            // 
             // panelForms
             // 
             this.panelForms.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
@@ -157,12 +172,6 @@
             this.panelForms.Name = "panelForms";
             this.panelForms.Size = new System.Drawing.Size(577, 432);
             this.panelForms.TabIndex = 0;
-            // 
-            // timer1
-            // 
-            this.timer1.Enabled = true;
-            this.timer1.Interval = 1000;
-            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // lblTimer
             // 
@@ -189,20 +198,11 @@
             this.pictureBox1.TabIndex = 6;
             this.pictureBox1.TabStop = false;
             // 
-            // btnHome
+            // timer1
             // 
-            this.btnHome.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.btnHome.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnHome.Image = global::OrdrDesktop.Properties.Resources.logo;
-            this.btnHome.Location = new System.Drawing.Point(46, 12);
-            this.btnHome.Name = "btnHome";
-            this.btnHome.Size = new System.Drawing.Size(99, 41);
-            this.btnHome.SizeMode = System.Windows.Forms.PictureBoxSizeMode.Zoom;
-            this.btnHome.TabIndex = 0;
-            this.btnHome.TabStop = false;
-            this.btnHome.Click += new System.EventHandler(this.btnHome_Click);
+            this.timer1.Enabled = true;
+            this.timer1.Interval = 1000;
+            this.timer1.Tick += new System.EventHandler(this.timer1_Tick);
             // 
             // FormDashboard
             // 
@@ -215,13 +215,14 @@
             this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.MinimumSize = new System.Drawing.Size(779, 471);
             this.Name = "FormDashboard";
+            this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "ORDR - Gerenciamento de Pedidos";
             this.panelMenu.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.panelForms.ResumeLayout(false);
             this.panelForms.PerformLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.btnHome)).EndInit();
             this.ResumeLayout(false);
 
         }

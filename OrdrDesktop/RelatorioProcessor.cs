@@ -24,5 +24,21 @@ namespace OrdrDesktop
                 }
             }
         }
+        public static async Task<RelatorioModel> openRelatorio()
+        {
+            HttpContent falseData = null;
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.PostAsync("http://localhost:3333/relatorio", falseData))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    RelatorioModel relatorio = await response.Content.ReadAsAsync<RelatorioModel>();
+                    return relatorio;
+                }
+                else
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+            }
+        }
     }
 }
