@@ -13,7 +13,6 @@ namespace OrdrDesktop
 {
     public partial class FormRelatorio : Form
     {
-        private List<RelatorioItemModel> relatorioData;
         public FormRelatorio()
         {
             InitializeComponent();
