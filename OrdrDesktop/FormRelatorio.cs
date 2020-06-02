@@ -17,44 +17,52 @@ namespace OrdrDesktop
         public FormRelatorio()
         {
             InitializeComponent();
-
         }
 
-        private async Task LoadRelatorios()
-        {
-            var relatorios = await RelatorioProcessor.loadRelatorio();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Data");
-            dt.Columns.Add("Debito");
-            dt.Columns.Add("Credito");
-            dt.Columns.Add("Dinheiro");
-            dt.Columns.Add("Total");         
-            foreach (var relatorio in relatorios)
+        private async Task LoadRelatorios() { 
+            try
             {
-                dt.Rows.Add(new object[] {
-                   relatorio.DataHora,
-                   relatorio.Debito.ToString(),
-                   relatorio.Credito.ToString(),
-                   relatorio.Dinheiro.ToString(),
-                   relatorio.Total.ToString()
-                });
+                var relatorios = await RelatorioProcessor.loadRelatorio();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Data");
+                dt.Columns.Add("Debito");
+                dt.Columns.Add("Credito");
+                dt.Columns.Add("Dinheiro");
+                dt.Columns.Add("Total");         
+                foreach (var relatorio in relatorios)
+                {
+                    dt.Rows.Add(new object[] {
+                       relatorio.DataHora,
+                       relatorio.Debito.ToString(),
+                       relatorio.Credito.ToString(),
+                       relatorio.Dinheiro.ToString(),
+                       relatorio.Total.ToString()
+                    });
 
+                }
+                dgvRelatorios.DataSource = dt;
             }
-            dgvRelatorios.DataSource = dt;
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("Nao foi possible carregar recursos, favor checar a conexao com o servidor", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async Task OpenRelatorios()
         {
-            var relatorios = await RelatorioProcessor.openRelatorio();
-            DataTable dt = new DataTable();
-            dt.Columns.Add("Data");
-            dt.Columns.Add("Debito");
-            dt.Columns.Add("Credito");
-            dt.Columns.Add("Dinheiro");
-            dt.Columns.Add("Total");
-            foreach (var relatorio in relatorios)
+            try
             {
-                dt.Rows.Add(new object[] {
+                var relatorios = await RelatorioProcessor.openRelatorio();
+                DataTable dt = new DataTable();
+                dt.Columns.Add("Data");
+                dt.Columns.Add("Debito");
+                dt.Columns.Add("Credito");
+                dt.Columns.Add("Dinheiro");
+                dt.Columns.Add("Total");
+                foreach (var relatorio in relatorios)
+                {
+                    dt.Rows.Add(new object[] {
                    relatorio.DataHora,
                    relatorio.Debito.ToString(),
                    relatorio.Credito.ToString(),
@@ -62,17 +70,31 @@ namespace OrdrDesktop
                    relatorio.Total.ToString()
                 });
 
+                }
+                dgvRelatorios.DataSource = dt;
             }
-            dgvRelatorios.DataSource = dt;
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("Nao foi possible carregar recursos, favor checar a conexao com o servidor", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
-        private async void FormRelatorio_Load(object sender, EventArgs e)
-        {        
-            await LoadRelatorios();
+        private void FormRelatorio_Load(object sender, EventArgs e)
+        {
+            LoadRelatorios();
         }
 
         private async void btnRefresh_Click(object sender, EventArgs e)
         {
-            await LoadRelatorios();
+            try
+            {
+                await LoadRelatorios();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show( "Nao foi possible carregar recursos, favor checar a conexao com o servidor", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
         }
 
         private async void btnOpenRelatorio_Click(object sender, EventArgs e)
