@@ -58,6 +58,12 @@ namespace OrdrDesktop
             string status = await ProdutoProcessor.createProduto(txbName.Text, float.Parse(numPreco.Value.ToString()), int.Parse(numEstoque.Value.ToString()), tipo);
             MessageBox.Show(status=="OK"?"Produto Cadastrado com sucesso":"Erro ao cadastrar produto");
         }
+        private async Task editProdutos()
+        {
+            string tipo = cbPrato.Checked ? "prato" : "";
+            string status = await ProdutoProcessor.editProduto(int.Parse(numCodigo.Value.ToString()),txbName.Text, float.Parse(numPreco.Value.ToString()), int.Parse(numEstoque.Value.ToString()), tipo);
+            MessageBox.Show(status == "OK" ? "Produto Cadastrado com sucesso" : "Erro ao cadastrar produto");
+        }
 
         private async void btnAtualizar_Click(object sender, EventArgs e)
         {
@@ -87,6 +93,46 @@ namespace OrdrDesktop
         private void dgvProdutos_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
         {
            numCodigo.Value = int.Parse(dgvProdutos.SelectedRows[0].Cells[0].Value.ToString());
+        }
+
+        private async void btnEdit_ClickAsync(object sender, EventArgs e)
+        {
+            if (txbName.Text != String.Empty && numPreco.Value != 0 && numCodigo.Value >0)
+            {
+                try
+                {
+                    await editProdutos();
+                    await getProdutos();
+                }
+                catch
+                {
+                    MessageBox.Show("Erro ao editar produto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Favor preencher os campos corretamente", "Campos mal preenchidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
+
+        private async void btnEstoque_Click(object sender, EventArgs e)
+        {
+            if (numCodigo.Value>=1)
+            {
+                try
+                {
+                    await estoqueProdutos();
+                    await getProdutos();
+                }
+                catch
+                {
+                    MessageBox.Show("Erro ao editar produto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Favor preencher os campos corretamente", "Campos mal preenchidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }

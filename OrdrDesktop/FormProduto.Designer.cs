@@ -51,6 +51,7 @@
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
+            this.btnEstoque = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelForm.SuspendLayout();
             this.panel6.SuspendLayout();
@@ -88,6 +89,7 @@
             // panelForm
             // 
             this.panelForm.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
+            this.panelForm.Controls.Add(this.btnEstoque);
             this.panelForm.Controls.Add(this.btnAtualizar);
             this.panelForm.Controls.Add(this.panel6);
             this.panelForm.Controls.Add(this.panel5);
@@ -115,7 +117,7 @@
             this.btnAtualizar.FlatAppearance.BorderSize = 0;
             this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnAtualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(132)))), ((int)(((byte)(139)))));
-            this.btnAtualizar.Location = new System.Drawing.Point(318, 82);
+            this.btnAtualizar.Location = new System.Drawing.Point(411, 82);
             this.btnAtualizar.Name = "btnAtualizar";
             this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
             this.btnAtualizar.TabIndex = 17;
@@ -208,7 +210,7 @@
             this.btnDel.FlatAppearance.BorderSize = 0;
             this.btnDel.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnDel.ForeColor = System.Drawing.Color.Firebrick;
-            this.btnDel.Location = new System.Drawing.Point(217, 82);
+            this.btnDel.Location = new System.Drawing.Point(312, 82);
             this.btnDel.Name = "btnDel";
             this.btnDel.Size = new System.Drawing.Size(75, 23);
             this.btnDel.TabIndex = 12;
@@ -222,12 +224,13 @@
             this.btnEdit.FlatAppearance.BorderSize = 0;
             this.btnEdit.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.btnEdit.ForeColor = System.Drawing.Color.DarkOrange;
-            this.btnEdit.Location = new System.Drawing.Point(116, 82);
+            this.btnEdit.Location = new System.Drawing.Point(114, 82);
             this.btnEdit.Name = "btnEdit";
             this.btnEdit.Size = new System.Drawing.Size(75, 23);
             this.btnEdit.TabIndex = 11;
             this.btnEdit.Text = "Editar";
             this.btnEdit.UseVisualStyleBackColor = false;
+            this.btnEdit.Click += new System.EventHandler(this.btnEdit_ClickAsync);
             // 
             // btnAdd
             // 
@@ -330,6 +333,21 @@
             this.dgvProdutos.TabIndex = 0;
             this.dgvProdutos.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProdutos_RowHeaderMouseClick);
             // 
+            // btnEstoque
+            // 
+            this.btnEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
+            this.btnEstoque.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnEstoque.FlatAppearance.BorderSize = 0;
+            this.btnEstoque.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnEstoque.ForeColor = System.Drawing.Color.DarkOrange;
+            this.btnEstoque.Location = new System.Drawing.Point(213, 82);
+            this.btnEstoque.Name = "btnEstoque";
+            this.btnEstoque.Size = new System.Drawing.Size(75, 23);
+            this.btnEstoque.TabIndex = 18;
+            this.btnEstoque.Text = "Estocar";
+            this.btnEstoque.UseVisualStyleBackColor = false;
+            this.btnEstoque.Click += new System.EventHandler(this.btnEstoque_Click);
+            // 
             // FormProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -384,5 +402,6 @@
         private System.Windows.Forms.Panel panel5;
         private System.Windows.Forms.NumericUpDown numPreco;
         private System.Windows.Forms.Button btnAtualizar;
+        private System.Windows.Forms.Button btnEstoque;
     }
 }
