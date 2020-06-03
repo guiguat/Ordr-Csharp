@@ -149,6 +149,7 @@
             this.btnAdd.TabIndex = 10;
             this.btnAdd.Text = "Adicionar";
             this.btnAdd.UseVisualStyleBackColor = false;
+            this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
             // 
             // numCodigo
             // 

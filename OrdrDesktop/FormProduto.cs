@@ -52,9 +52,36 @@ namespace OrdrDesktop
             }
         }
 
+        private async Task createProdutos()
+        {
+            string tipo = cbPrato.Checked ? "prato" : "";
+            string status = await ProdutoProcessor.createProduto(txbName.Text, float.Parse(numPreco.Value.ToString()), int.Parse(numEstoque.Value.ToString()), tipo);
+            MessageBox.Show(status=="OK"?"Produto Cadastrado com sucesso":"Erro ao cadastrar produto");
+        }
+
         private async void btnAtualizar_Click(object sender, EventArgs e)
         {
             await getProdutos();
+        }
+
+        private async void btnAdd_Click(object sender, EventArgs e)
+        {
+            if (txbName.Text != String.Empty && numPreco.Value != 0)
+            {
+                try
+                {
+                    await createProdutos();
+                    await getProdutos();
+                }
+                catch
+                {
+                    MessageBox.Show("Erro ao cadastrar produto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Favor preencher os campos corretamente","Campos mal preenchidos",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
         }
     }
 }
