@@ -52,5 +52,9 @@ namespace OrdrDesktop
             }
         }
 
+        private async void btnAtualizar_Click(object sender, EventArgs e)
+        {
+            await getProdutos();
+        }
     }
 }
