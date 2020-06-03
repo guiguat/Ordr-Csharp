@@ -252,6 +252,7 @@
             this.dgvProdutos.GridColor = System.Drawing.Color.FromArgb(((int)(((byte)(19)))), ((int)(((byte)(35)))), ((int)(((byte)(50)))));
             this.dgvProdutos.Location = new System.Drawing.Point(0, 0);
             this.dgvProdutos.Name = "dgvProdutos";
+            this.dgvProdutos.RowHeadersWidth = 75;
             this.dgvProdutos.Size = new System.Drawing.Size(561, 240);
             this.dgvProdutos.TabIndex = 0;
             // 
@@ -335,6 +336,7 @@
             this.Controls.Add(this.panel1);
             this.Name = "FormProduto";
             this.Text = "FormProduto";
+            this.Load += new System.EventHandler(this.FormProduto_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
             this.panelForm.ResumeLayout(false);

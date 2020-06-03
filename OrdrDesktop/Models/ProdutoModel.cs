@@ -10,10 +10,10 @@ namespace OrdrDesktop.Models
 
     public class ProdutoItemModel
     {
-        public DateTime DataHora { get; set; }
-        public float Debito { get; set; }
-        public float Credito { get; set; }
-        public float Dinheiro { get; set; }
-        public float Total { get; set; }
+        public int Id { get; set; }
+        public string Nome { get; set; }
+        public float Preco { get; set; }
+        public int Estoque { get; set; }
+        public string Tipo { get; set; }
     }
 }
