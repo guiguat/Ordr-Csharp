@@ -7,7 +7,7 @@ namespace OrdrDesktop.Models
 {
     class CozinhaProcessor
     {
-        public static async Task<CozinhaModel> getProdutos()
+        public static async Task<CozinhaModel> getPedidos()
         {
             using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync($"{ApiHelper.baseUrl}/pedido"))
             {
@@ -34,7 +34,6 @@ namespace OrdrDesktop.Models
         public int Id {get;set;}
         public int Mesa { get; set; }
         public string Pedidos { get; set; }
-        public DateTime DataHora { get; set; }  
 
     }
 }
