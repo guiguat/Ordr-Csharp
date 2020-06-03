@@ -135,5 +135,26 @@ namespace OrdrDesktop
                 MessageBox.Show("Favor preencher os campos corretamente", "Campos mal preenchidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private async void btnDel_Click(object sender, EventArgs e)
+        {
+            if (numCodigo.Value >= 1)
+            {
+                try
+                {
+                    string status = await ProdutoProcessor.deleteProduto(int.Parse(numCodigo.Value.ToString()));
+                    MessageBox.Show(status == "OK" ? "Produto removido com sucesso" : "Erro ao remover produto");
+                    await getProdutos();
+                }
+                catch
+                {
+                    MessageBox.Show("Erro ao remover produto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                }
+            }
+            else
+            {
+                MessageBox.Show("Favor selecionar item corretamente", "Campos mal preenchidos", MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
+            }
+        }
     }
 }

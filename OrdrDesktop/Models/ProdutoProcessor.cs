@@ -32,7 +32,6 @@ namespace OrdrDesktop
             produto.estoque = estoque;
             produto.tipo = tipo;
             var json = JsonConvert.SerializeObject(produto);
-            Console.WriteLine(json.ToString());
             var data = new StringContent(json, Encoding.UTF8, "application/json");
             using (HttpResponseMessage response = await ApiHelper.ApiClient.PostAsync($"{ApiHelper.baseUrl}/produto", data))
             {
@@ -56,7 +55,6 @@ namespace OrdrDesktop
             produto.estoque = estoque;
             produto.tipo = tipo;
             var json = JsonConvert.SerializeObject(produto);
-            Console.WriteLine(json.ToString());
             var data = new StringContent(json, Encoding.UTF8, "application/json");
             using (HttpResponseMessage response = await ApiHelper.ApiClient.PutAsync($"{ApiHelper.baseUrl}/produto", data))
             {
@@ -76,9 +74,24 @@ namespace OrdrDesktop
             produto.id = id;
             produto.estoque = estoque;
             var json = JsonConvert.SerializeObject(produto);
-            Console.WriteLine(json.ToString());
             var data = new StringContent(json, Encoding.UTF8, "application/json");
             using (HttpResponseMessage response = await ApiHelper.ApiClient.PutAsync($"{ApiHelper.baseUrl}/produto/estoque", data))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    return "OK";
+                }
+                else
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+            }
+        }
+        public static async Task<string> deleteProduto(int id)
+        {
+            var produto = new ProdutoCreateModel();
+            produto.id = id;
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.DeleteAsync($"{ApiHelper.baseUrl}/produto?id={produto.id}"))
             {
                 if (response.IsSuccessStatusCode)
                 {
