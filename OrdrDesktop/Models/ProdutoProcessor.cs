@@ -15,8 +15,8 @@ namespace OrdrDesktop
             {
                 if (response.IsSuccessStatusCode)
                 {
-                    ProdutoModel relatorio = await response.Content.ReadAsAsync<ProdutoModel>();
-                    return relatorio;
+                    ProdutoModel produto = await response.Content.ReadAsAsync<ProdutoModel>();
+                    return produto;
                 }
                 else
                 {

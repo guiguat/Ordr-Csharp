@@ -15,6 +15,22 @@ namespace OrdrDesktop
         public FormConfig()
         {
             InitializeComponent();
+            lblBaseURL.Font = new Font("poppins", 10, FontStyle.Bold);
+            btnSure.Visible = false;
+            lblBaseURL.Text = ApiHelper.baseUrl;
+        }
+
+        private void btnAlterarURL_Click(object sender, EventArgs e)
+        {
+            btnAlterarURL.Visible = false;
+            btnSure.Visible = true;
+        }
+
+        private void btnSure_Click(object sender, EventArgs e)
+        {
+            ApiHelper.baseUrl = txbURL.Text;
+            btnAlterarURL.Visible = true;
+            btnSure.Visible = false;
         }
     }
 }

@@ -25,21 +25,21 @@ namespace OrdrDesktop
         {
             try
             {
-                var relatorios = await ProdutoProcessor.getProdutos();
+                var produtos = await ProdutoProcessor.getProdutos();
                 DataTable dt = new DataTable();
                 dt.Columns.Add("Cod");
                 dt.Columns.Add("Nome");
                 dt.Columns.Add("Preço");
                 dt.Columns.Add("Estoque");
                 dt.Columns.Add("Tipo");
-                foreach (var relatorio in relatorios)
+                foreach (var produto in produtos)
                 {
                     dt.Rows.Add(new object[] {
-                       relatorio.Id,
-                       relatorio.Nome,
-                       relatorio.Preco,
-                       relatorio.Estoque,
-                       relatorio.Tipo
+                      produto.Id,
+                      produto.Nome,
+                      produto.Preco,
+                      produto.Estoque,
+                      produto.Tipo
                     });
 
                 }
