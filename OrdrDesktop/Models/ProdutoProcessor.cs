@@ -46,5 +46,28 @@ namespace OrdrDesktop
                 }
             }
         }
+
+        public static async Task<string> editProduto(int id, string nome, float preco, int estoque, string tipo)
+        {
+            var produto = new ProdutoCreateModel();
+            produto.nome = nome;
+            produto.preco = preco;
+            produto.estoque = estoque;
+            produto.tipo = tipo;
+            var json = JsonConvert.SerializeObject(produto);
+            Console.WriteLine(json.ToString());
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.PostAsync($"{ApiHelper.baseUrl}/produto", data))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    return "OK";
+                }
+                else
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+            }
+        }
     }
 }

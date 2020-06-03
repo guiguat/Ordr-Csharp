@@ -328,6 +328,7 @@
             this.dgvProdutos.RowHeadersWidth = 75;
             this.dgvProdutos.Size = new System.Drawing.Size(561, 224);
             this.dgvProdutos.TabIndex = 0;
+            this.dgvProdutos.RowHeaderMouseClick += new System.Windows.Forms.DataGridViewCellMouseEventHandler(this.dgvProdutos_RowHeaderMouseClick);
             // 
             // FormProduto
             // 

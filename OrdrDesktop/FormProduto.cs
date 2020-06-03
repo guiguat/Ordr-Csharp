@@ -83,5 +83,10 @@ namespace OrdrDesktop
                 MessageBox.Show("Favor preencher os campos corretamente","Campos mal preenchidos",MessageBoxButtons.OK, MessageBoxIcon.Exclamation);
             }
         }
+
+        private void dgvProdutos_RowHeaderMouseClick(object sender, DataGridViewCellMouseEventArgs e)
+        {
+           numCodigo.Value = int.Parse(dgvProdutos.SelectedRows[0].Cells[0].Value.ToString());
+        }
     }
 }
