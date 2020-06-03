@@ -31,37 +31,37 @@
             this.label1 = new System.Windows.Forms.Label();
             this.panel1 = new System.Windows.Forms.Panel();
             this.panelForm = new System.Windows.Forms.Panel();
+            this.btnAtualizar = new System.Windows.Forms.Button();
+            this.panel6 = new System.Windows.Forms.Panel();
+            this.numEstoque = new System.Windows.Forms.NumericUpDown();
+            this.panel5 = new System.Windows.Forms.Panel();
+            this.numPreco = new System.Windows.Forms.NumericUpDown();
+            this.panel4 = new System.Windows.Forms.Panel();
+            this.numCodigo = new System.Windows.Forms.NumericUpDown();
+            this.panel3 = new System.Windows.Forms.Panel();
+            this.txbName = new System.Windows.Forms.TextBox();
             this.btnDel = new System.Windows.Forms.Button();
             this.btnEdit = new System.Windows.Forms.Button();
             this.btnAdd = new System.Windows.Forms.Button();
-            this.numCodigo = new System.Windows.Forms.NumericUpDown();
             this.label6 = new System.Windows.Forms.Label();
             this.cbPrato = new System.Windows.Forms.CheckBox();
             this.label5 = new System.Windows.Forms.Label();
             this.label4 = new System.Windows.Forms.Label();
             this.label3 = new System.Windows.Forms.Label();
-            this.txbName = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvProdutos = new System.Windows.Forms.DataGridView();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel4 = new System.Windows.Forms.Panel();
-            this.panel5 = new System.Windows.Forms.Panel();
-            this.numPreco = new System.Windows.Forms.NumericUpDown();
-            this.panel6 = new System.Windows.Forms.Panel();
-            this.numEstoque = new System.Windows.Forms.NumericUpDown();
-            this.btnAtualizar = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panelForm.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numCodigo)).BeginInit();
-            this.panel2.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
-            this.panel3.SuspendLayout();
-            this.panel4.SuspendLayout();
-            this.panel5.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numPreco)).BeginInit();
             this.panel6.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.numEstoque)).BeginInit();
+            this.panel5.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numPreco)).BeginInit();
+            this.panel4.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.numCodigo)).BeginInit();
+            this.panel3.SuspendLayout();
+            this.panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -108,6 +108,99 @@
             this.panelForm.Size = new System.Drawing.Size(561, 120);
             this.panelForm.TabIndex = 2;
             // 
+            // btnAtualizar
+            // 
+            this.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
+            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnAtualizar.FlatAppearance.BorderSize = 0;
+            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnAtualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(132)))), ((int)(((byte)(139)))));
+            this.btnAtualizar.Location = new System.Drawing.Point(318, 82);
+            this.btnAtualizar.Name = "btnAtualizar";
+            this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
+            this.btnAtualizar.TabIndex = 17;
+            this.btnAtualizar.Text = "Atualizar";
+            this.btnAtualizar.UseVisualStyleBackColor = false;
+            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
+            // 
+            // panel6
+            // 
+            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.panel6.Controls.Add(this.numEstoque);
+            this.panel6.Location = new System.Drawing.Point(277, 48);
+            this.panel6.Name = "panel6";
+            this.panel6.Size = new System.Drawing.Size(134, 23);
+            this.panel6.TabIndex = 16;
+            // 
+            // numEstoque
+            // 
+            this.numEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.numEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numEstoque.ForeColor = System.Drawing.SystemColors.Window;
+            this.numEstoque.Location = new System.Drawing.Point(7, 3);
+            this.numEstoque.Name = "numEstoque";
+            this.numEstoque.Size = new System.Drawing.Size(120, 16);
+            this.numEstoque.TabIndex = 9;
+            // 
+            // panel5
+            // 
+            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.panel5.Controls.Add(this.numPreco);
+            this.panel5.Location = new System.Drawing.Point(56, 45);
+            this.panel5.Name = "panel5";
+            this.panel5.Size = new System.Drawing.Size(134, 23);
+            this.panel5.TabIndex = 15;
+            // 
+            // numPreco
+            // 
+            this.numPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.numPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numPreco.DecimalPlaces = 2;
+            this.numPreco.ForeColor = System.Drawing.SystemColors.Window;
+            this.numPreco.Location = new System.Drawing.Point(7, 3);
+            this.numPreco.Name = "numPreco";
+            this.numPreco.Size = new System.Drawing.Size(120, 16);
+            this.numPreco.TabIndex = 9;
+            // 
+            // panel4
+            // 
+            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.panel4.Controls.Add(this.numCodigo);
+            this.panel4.Location = new System.Drawing.Point(107, 14);
+            this.panel4.Name = "panel4";
+            this.panel4.Size = new System.Drawing.Size(134, 23);
+            this.panel4.TabIndex = 14;
+            // 
+            // numCodigo
+            // 
+            this.numCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.numCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.numCodigo.ForeColor = System.Drawing.SystemColors.Window;
+            this.numCodigo.Location = new System.Drawing.Point(7, 3);
+            this.numCodigo.Name = "numCodigo";
+            this.numCodigo.Size = new System.Drawing.Size(120, 16);
+            this.numCodigo.TabIndex = 9;
+            // 
+            // panel3
+            // 
+            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.panel3.Controls.Add(this.txbName);
+            this.panel3.Location = new System.Drawing.Point(301, 16);
+            this.panel3.Name = "panel3";
+            this.panel3.Size = new System.Drawing.Size(187, 23);
+            this.panel3.TabIndex = 13;
+            // 
+            // txbName
+            // 
+            this.txbName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.txbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
+            this.txbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.txbName.ForeColor = System.Drawing.SystemColors.Window;
+            this.txbName.Location = new System.Drawing.Point(8, 3);
+            this.txbName.Name = "txbName";
+            this.txbName.Size = new System.Drawing.Size(165, 13);
+            this.txbName.TabIndex = 1;
+            // 
             // btnDel
             // 
             this.btnDel.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
@@ -150,16 +243,6 @@
             this.btnAdd.Text = "Adicionar";
             this.btnAdd.UseVisualStyleBackColor = false;
             this.btnAdd.Click += new System.EventHandler(this.btnAdd_Click);
-            // 
-            // numCodigo
-            // 
-            this.numCodigo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
-            this.numCodigo.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numCodigo.ForeColor = System.Drawing.SystemColors.Window;
-            this.numCodigo.Location = new System.Drawing.Point(7, 3);
-            this.numCodigo.Name = "numCodigo";
-            this.numCodigo.Size = new System.Drawing.Size(120, 16);
-            this.numCodigo.TabIndex = 9;
             // 
             // label6
             // 
@@ -215,17 +298,6 @@
             this.label3.TabIndex = 2;
             this.label3.Text = "Preço:";
             // 
-            // txbName
-            // 
-            this.txbName.Anchor = System.Windows.Forms.AnchorStyles.None;
-            this.txbName.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
-            this.txbName.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.txbName.ForeColor = System.Drawing.SystemColors.Window;
-            this.txbName.Location = new System.Drawing.Point(8, 3);
-            this.txbName.Name = "txbName";
-            this.txbName.Size = new System.Drawing.Size(165, 13);
-            this.txbName.TabIndex = 1;
-            // 
             // label2
             // 
             this.label2.AutoSize = true;
@@ -257,77 +329,6 @@
             this.dgvProdutos.Size = new System.Drawing.Size(561, 224);
             this.dgvProdutos.TabIndex = 0;
             // 
-            // panel3
-            // 
-            this.panel3.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
-            this.panel3.Controls.Add(this.txbName);
-            this.panel3.Location = new System.Drawing.Point(301, 16);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(187, 23);
-            this.panel3.TabIndex = 13;
-            // 
-            // panel4
-            // 
-            this.panel4.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
-            this.panel4.Controls.Add(this.numCodigo);
-            this.panel4.Location = new System.Drawing.Point(107, 14);
-            this.panel4.Name = "panel4";
-            this.panel4.Size = new System.Drawing.Size(134, 23);
-            this.panel4.TabIndex = 14;
-            // 
-            // panel5
-            // 
-            this.panel5.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
-            this.panel5.Controls.Add(this.numPreco);
-            this.panel5.Location = new System.Drawing.Point(56, 45);
-            this.panel5.Name = "panel5";
-            this.panel5.Size = new System.Drawing.Size(134, 23);
-            this.panel5.TabIndex = 15;
-            // 
-            // numPreco
-            // 
-            this.numPreco.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
-            this.numPreco.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numPreco.ForeColor = System.Drawing.SystemColors.Window;
-            this.numPreco.Location = new System.Drawing.Point(7, 3);
-            this.numPreco.Name = "numPreco";
-            this.numPreco.Size = new System.Drawing.Size(120, 16);
-            this.numPreco.TabIndex = 9;
-            // 
-            // panel6
-            // 
-            this.panel6.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
-            this.panel6.Controls.Add(this.numEstoque);
-            this.panel6.Location = new System.Drawing.Point(277, 48);
-            this.panel6.Name = "panel6";
-            this.panel6.Size = new System.Drawing.Size(134, 23);
-            this.panel6.TabIndex = 16;
-            // 
-            // numEstoque
-            // 
-            this.numEstoque.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(18)))), ((int)(((byte)(33)))), ((int)(((byte)(46)))));
-            this.numEstoque.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.numEstoque.ForeColor = System.Drawing.SystemColors.Window;
-            this.numEstoque.Location = new System.Drawing.Point(7, 3);
-            this.numEstoque.Name = "numEstoque";
-            this.numEstoque.Size = new System.Drawing.Size(120, 16);
-            this.numEstoque.TabIndex = 9;
-            // 
-            // btnAtualizar
-            // 
-            this.btnAtualizar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
-            this.btnAtualizar.Cursor = System.Windows.Forms.Cursors.Hand;
-            this.btnAtualizar.FlatAppearance.BorderSize = 0;
-            this.btnAtualizar.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
-            this.btnAtualizar.ForeColor = System.Drawing.Color.FromArgb(((int)(((byte)(14)))), ((int)(((byte)(132)))), ((int)(((byte)(139)))));
-            this.btnAtualizar.Location = new System.Drawing.Point(318, 82);
-            this.btnAtualizar.Name = "btnAtualizar";
-            this.btnAtualizar.Size = new System.Drawing.Size(75, 23);
-            this.btnAtualizar.TabIndex = 17;
-            this.btnAtualizar.Text = "Atualizar";
-            this.btnAtualizar.UseVisualStyleBackColor = false;
-            this.btnAtualizar.Click += new System.EventHandler(this.btnAtualizar_Click);
-            // 
             // FormProduto
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -343,16 +344,16 @@
             this.panel1.PerformLayout();
             this.panelForm.ResumeLayout(false);
             this.panelForm.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.numCodigo)).EndInit();
-            this.panel2.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
-            this.panel3.ResumeLayout(false);
-            this.panel3.PerformLayout();
-            this.panel4.ResumeLayout(false);
-            this.panel5.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.numPreco)).EndInit();
             this.panel6.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.numEstoque)).EndInit();
+            this.panel5.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numPreco)).EndInit();
+            this.panel4.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.numCodigo)).EndInit();
+            this.panel3.ResumeLayout(false);
+            this.panel3.PerformLayout();
+            this.panel2.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.dgvProdutos)).EndInit();
             this.ResumeLayout(false);
 
         }
