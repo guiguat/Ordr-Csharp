@@ -15,7 +15,7 @@ namespace OrdrDesktop
         public static void InitializeClient()
         {
             ApiClient = new HttpClient();
-            ApiClient.BaseAddress = new Uri(baseUrl="http://localhost:3333/");  
+            ApiClient.BaseAddress = new Uri(baseUrl="http://localhost:3333");  
             ApiClient.DefaultRequestHeaders.Accept.Clear();
             ApiClient.DefaultRequestHeaders.Accept.Add(new MediaTypeWithQualityHeaderValue("application/json"));
         }

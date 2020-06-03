@@ -9,7 +9,7 @@ namespace OrdrDesktop
     {
         public static async Task<RelatorioModel> loadRelatorio()
         {
-            using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync("http://localhost:3333/relatorio")) {
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync($"{ApiHelper.baseUrl}/relatorio")) {
                 if (response.IsSuccessStatusCode)
                 {
                     RelatorioModel relatorio = await response.Content.ReadAsAsync<RelatorioModel>();
@@ -24,7 +24,7 @@ namespace OrdrDesktop
         public static async Task<RelatorioModel> openRelatorio()
         {
             HttpContent falseData = null;
-            using (HttpResponseMessage response = await ApiHelper.ApiClient.PostAsync("http://localhost:3333/relatorio", falseData))
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.PostAsync($"{ApiHelper.baseUrl}/relatorio", falseData))
             {
                 if (response.IsSuccessStatusCode)
                 {

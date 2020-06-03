@@ -11,7 +11,7 @@ namespace OrdrDesktop
     {
         public static async Task<ProdutoModel> getProdutos()
         {
-            using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync("http://localhost:3333/produto"))
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync($"{ApiHelper.baseUrl}/produto"))
             {
                 if (response.IsSuccessStatusCode)
                 {
@@ -34,7 +34,7 @@ namespace OrdrDesktop
             var json = JsonConvert.SerializeObject(produto);
             Console.WriteLine(json.ToString());
             var data = new StringContent(json, Encoding.UTF8, "application/json");
-            using (HttpResponseMessage response = await ApiHelper.ApiClient.PostAsync("http://localhost:3333/produto", data))
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.PostAsync($"{ApiHelper.baseUrl}/produto", data))
             {
                 if (response.IsSuccessStatusCode)
                 {
