@@ -22,6 +22,24 @@ namespace OrdrDesktop.Models
                 }
             }
         }
+        public static async Task<string> deletePedido(int id)
+        {
+            var pedido = new CozinhaItemModel();
+            pedido.Id = id;
+            Console.WriteLine(pedido.Id);
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.DeleteAsync($"{ApiHelper.baseUrl}/pedido?id={pedido.Id}"))
+            {
+                if (response.IsSuccessStatusCode)
+                {   
+                    return "OK";
+                }
+                else
+                {
+                    Console.WriteLine(response.ReasonPhrase);
+                    throw new Exception(response.ReasonPhrase);              
+                }
+            }
+        }
 
     }
     class CozinhaModel : List<CozinhaItemModel>

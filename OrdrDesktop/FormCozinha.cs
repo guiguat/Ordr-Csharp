@@ -48,5 +48,37 @@ namespace OrdrDesktop
         {
             LoadCozinha();
         }
+
+        private async void btnDeletePedido_Click(object sender, EventArgs e)
+        {
+           try
+            {
+                var delId = int.Parse(dgvCozinha.SelectedRows[0].Cells[0].Value.ToString());
+                DialogResult result = MessageBox.Show($"Você deseja deletar o item de número:{delId} da lista?", "Confirmação", MessageBoxButtons.YesNo);
+                if (result == DialogResult.Yes)
+                {
+                    try
+                    {
+                        await CozinhaProcessor.deletePedido(delId);
+                        LoadCozinha();
+                    }
+                    catch (Exception ex)
+                    {
+                        Console.WriteLine(ex.Message);
+                        MessageBox.Show("Erro ao deletar pedido", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    }
+                }
+                else if (result == DialogResult.No)
+                {
+                    //...
+                }
+            }
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+                MessageBox.Show("Favor selecionar a linha que deseja excluir", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+            }
+
+        }
     }
 }

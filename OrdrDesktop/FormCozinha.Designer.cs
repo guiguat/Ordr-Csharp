@@ -32,6 +32,7 @@
             this.btnAtualizar = new System.Windows.Forms.Button();
             this.panel2 = new System.Windows.Forms.Panel();
             this.dgvCozinha = new System.Windows.Forms.DataGridView();
+            this.btnDeletePedido = new System.Windows.Forms.Button();
             this.panel1.SuspendLayout();
             this.panel2.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgvCozinha)).BeginInit();
@@ -40,6 +41,7 @@
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
+            this.panel1.Controls.Add(this.btnDeletePedido);
             this.panel1.Controls.Add(this.btnAtualizar);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
             this.panel1.Location = new System.Drawing.Point(0, 0);
@@ -83,6 +85,21 @@
             this.dgvCozinha.Size = new System.Drawing.Size(537, 286);
             this.dgvCozinha.TabIndex = 0;
             // 
+            // btnDeletePedido
+            // 
+            this.btnDeletePedido.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(27)))), ((int)(((byte)(42)))), ((int)(((byte)(56)))));
+            this.btnDeletePedido.Cursor = System.Windows.Forms.Cursors.Hand;
+            this.btnDeletePedido.FlatAppearance.BorderSize = 0;
+            this.btnDeletePedido.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
+            this.btnDeletePedido.ForeColor = System.Drawing.Color.Red;
+            this.btnDeletePedido.Location = new System.Drawing.Point(93, 30);
+            this.btnDeletePedido.Name = "btnDeletePedido";
+            this.btnDeletePedido.Size = new System.Drawing.Size(75, 23);
+            this.btnDeletePedido.TabIndex = 1;
+            this.btnDeletePedido.Text = "Delete";
+            this.btnDeletePedido.UseVisualStyleBackColor = false;
+            this.btnDeletePedido.Click += new System.EventHandler(this.btnDeletePedido_Click);
+            // 
             // FormCozinha
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -106,5 +123,6 @@
         private System.Windows.Forms.Button btnAtualizar;
         private System.Windows.Forms.Panel panel2;
         private System.Windows.Forms.DataGridView dgvCozinha;
+        private System.Windows.Forms.Button btnDeletePedido;
     }
 }
