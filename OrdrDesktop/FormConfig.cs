@@ -15,7 +15,6 @@ namespace OrdrDesktop
         public FormConfig()
         {
             InitializeComponent();
-            lblBaseURL.Font = new Font("poppins", 10, FontStyle.Bold);
             btnSure.Visible = false;
             lblBaseURL.Text = ApiHelper.baseUrl;
         }
@@ -31,6 +30,7 @@ namespace OrdrDesktop
             ApiHelper.baseUrl = txbURL.Text;
             btnAlterarURL.Visible = true;
             btnSure.Visible = false;
+            txbURL.Text = "";
         }
     }
 }

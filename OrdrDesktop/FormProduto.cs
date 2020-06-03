@@ -68,6 +68,11 @@ namespace OrdrDesktop
         private async void btnAtualizar_Click(object sender, EventArgs e)
         {
             await getProdutos();
+            txbName.Text = "";
+            numCodigo.Value = 0;
+            numEstoque.Value = 0;
+            numPreco.Value = 0;
+            cbPrato.Checked = false;
         }
 
         private async void btnAdd_Click(object sender, EventArgs e)
@@ -83,6 +88,11 @@ namespace OrdrDesktop
                 {
                     MessageBox.Show("Erro ao cadastrar produto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                txbName.Text = "";
+                numCodigo.Value = 0;
+                numEstoque.Value = 0;
+                numPreco.Value = 0;
+                cbPrato.Checked = false;
             }
             else
             {
@@ -108,6 +118,11 @@ namespace OrdrDesktop
                 {
                     MessageBox.Show("Erro ao editar produto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                txbName.Text = "";
+                numCodigo.Value = 0;
+                numEstoque.Value = 0;
+                numPreco.Value = 0;
+                cbPrato.Checked = false;
             }
             else
             {
@@ -129,6 +144,11 @@ namespace OrdrDesktop
                 {
                     MessageBox.Show("Erro ao estocar produto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                txbName.Text = "";
+                numCodigo.Value = 0;
+                numEstoque.Value = 0;
+                numPreco.Value = 0;
+                cbPrato.Checked = false;
             }
             else
             {
@@ -150,6 +170,11 @@ namespace OrdrDesktop
                 {
                     MessageBox.Show("Erro ao remover produto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
+                txbName.Text = "";
+                numCodigo.Value = 0;
+                numEstoque.Value = 0;
+                numPreco.Value = 0;
+                cbPrato.Checked = false;
             }
             else
             {
