@@ -56,13 +56,13 @@ namespace OrdrDesktop
         {
             string tipo = cbPrato.Checked ? "prato" : "";
             string status = await ProdutoProcessor.createProduto(txbName.Text, float.Parse(numPreco.Value.ToString()), int.Parse(numEstoque.Value.ToString()), tipo);
-            MessageBox.Show(status=="OK"?"Produto Cadastrado com sucesso":"Erro ao cadastrar produto");
+            MessageBox.Show(status=="OK"?"Produto cadastrado com sucesso":"Erro ao cadastrar produto");
         }
         private async Task editProdutos()
         {
             string tipo = cbPrato.Checked ? "prato" : "";
             string status = await ProdutoProcessor.editProduto(int.Parse(numCodigo.Value.ToString()),txbName.Text, float.Parse(numPreco.Value.ToString()), int.Parse(numEstoque.Value.ToString()), tipo);
-            MessageBox.Show(status == "OK" ? "Produto Cadastrado com sucesso" : "Erro ao cadastrar produto");
+            MessageBox.Show(status == "OK" ? "Produto editado com sucesso" : "Erro ao editar produto");
         }
 
         private async void btnAtualizar_Click(object sender, EventArgs e)
@@ -121,12 +121,13 @@ namespace OrdrDesktop
             {
                 try
                 {
-                    await estoqueProdutos();
+                    string status = await ProdutoProcessor.estoqueProduto(int.Parse(numCodigo.Value.ToString()), int.Parse(numEstoque.Value.ToString()));
+                    MessageBox.Show(status == "OK" ? "Produto estocado com sucesso" : "Erro ao cadastrar produto");
                     await getProdutos();
                 }
                 catch
                 {
-                    MessageBox.Show("Erro ao editar produto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                    MessageBox.Show("Erro ao estocar produto", "Erro", MessageBoxButtons.OK, MessageBoxIcon.Error);
                 }
             }
             else

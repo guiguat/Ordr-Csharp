@@ -70,5 +70,25 @@ namespace OrdrDesktop
                 }
             }
         }
+        public static async Task<string> estoqueProduto(int id, int estoque)
+        {
+            var produto = new ProdutoCreateModel();
+            produto.id = id;
+            produto.estoque = estoque;
+            var json = JsonConvert.SerializeObject(produto);
+            Console.WriteLine(json.ToString());
+            var data = new StringContent(json, Encoding.UTF8, "application/json");
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.PutAsync($"{ApiHelper.baseUrl}/produto/estoque", data))
+            {
+                if (response.IsSuccessStatusCode)
+                {
+                    return "OK";
+                }
+                else
+                {
+                    throw new Exception(response.ReasonPhrase);
+                }
+            }
+        }
     }
 }
