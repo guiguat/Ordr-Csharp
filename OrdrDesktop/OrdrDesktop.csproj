@@ -83,6 +83,8 @@
     <Compile Include="FormRelatorio.Designer.cs">
       <DependentUpon>FormRelatorio.cs</DependentUpon>
     </Compile>
+    <Compile Include="Models\ProdutoModel.cs" />
+    <Compile Include="Models\ProdutoProcessor.cs" />
     <Compile Include="Models\RelatorioModel.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

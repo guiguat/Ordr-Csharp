@@ -28,15 +28,12 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.components = new System.ComponentModel.Container();
             this.dgvRelatorios = new System.Windows.Forms.DataGridView();
             this.btnRefresh = new System.Windows.Forms.Button();
             this.btnOpenRelatorio = new System.Windows.Forms.Button();
             this.panelButtons = new System.Windows.Forms.Panel();
-            this.relatorioItemModelBindingSource = new System.Windows.Forms.BindingSource(this.components);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorios)).BeginInit();
             this.panelButtons.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.relatorioItemModelBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // dgvRelatorios
@@ -99,10 +96,6 @@
             this.panelButtons.Size = new System.Drawing.Size(561, 61);
             this.panelButtons.TabIndex = 3;
             // 
-            // relatorioItemModelBindingSource
-            // 
-            this.relatorioItemModelBindingSource.DataSource = typeof(OrdrDesktop.models.RelatorioItemModel);
-            // 
             // FormRelatorio
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -117,7 +110,6 @@
             this.Load += new System.EventHandler(this.FormRelatorio_Load);
             ((System.ComponentModel.ISupportInitialize)(this.dgvRelatorios)).EndInit();
             this.panelButtons.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.relatorioItemModelBindingSource)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -125,7 +117,6 @@
         #endregion
 
         private System.Windows.Forms.DataGridView dgvRelatorios;
-        private System.Windows.Forms.BindingSource relatorioItemModelBindingSource;
         private System.Windows.Forms.Button btnRefresh;
         private System.Windows.Forms.Button btnOpenRelatorio;
         private System.Windows.Forms.Panel panelButtons;

@@ -6,12 +6,12 @@ using System.Threading.Tasks;
 
 namespace OrdrDesktop.Models
 {
-    public class RelatorioModel : List<RelatorioItemModel>
+    public class ProdutoModel : List<ProdutoItemModel>
     {
-        
+
     }
 
-    public class RelatorioItemModel
+    public class ProdutoItemModel
     {
         public DateTime DataHora { get; set; }
         public float Debito { get; set; }

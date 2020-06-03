@@ -1,21 +1,19 @@
 ﻿using OrdrDesktop.Models;
 using System;
-using System.Collections.Generic;
-using System.Linq;
 using System.Net.Http;
-using System.Text;
 using System.Threading.Tasks;
 
 namespace OrdrDesktop
 {
-    public class RelatorioProcessor
+    public class ProdutoProcessor
     {
-        public static async Task<RelatorioModel> loadRelatorio()
+        public static async Task<ProdutoModel> getProdutos()
         {
-            using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync("http://localhost:3333/relatorio")) {
+            using (HttpResponseMessage response = await ApiHelper.ApiClient.GetAsync("http://localhost:3333/produto"))
+            {
                 if (response.IsSuccessStatusCode)
                 {
-                    RelatorioModel relatorio = await response.Content.ReadAsAsync<RelatorioModel>();
+                    ProdutoModel relatorio = await response.Content.ReadAsAsync<ProdutoModel>();
                     return relatorio;
                 }
                 else
