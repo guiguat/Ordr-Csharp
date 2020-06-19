@@ -1,2 +1,2 @@
-# Ordr-Desktop
-Front-End desktop para a API do ORDR
+# Ordr-C#
+Front-End desktop para a API do ORDR v1
